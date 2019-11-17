@@ -1,0 +1,30 @@
+import java.util.List;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+public class UploadPhotoServlet extends HttpServlet {
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) {
+		String filename = null;
+		try {
+			DiskFileItemFactory factory = new DiskFileItemFactory();
+			ServletFileUpload upload = new ServletFileUpload();
+			factory.setSizeThreshold(1014 * 1024);
+			List items=null;
+			try {
+				items=upload.parseRequest(request);
+			} catch (FileUploadException e) {
+				e.printStackTrance();
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

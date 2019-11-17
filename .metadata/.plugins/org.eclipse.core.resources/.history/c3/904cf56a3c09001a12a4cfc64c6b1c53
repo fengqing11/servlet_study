@@ -1,0 +1,18 @@
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+
+public class UploadPhotoServlet extends HttpServlet{
+
+	public void doPost(HttpServletRequest request,HttpServletResponse response) {
+		String filename=null;
+		try {
+			DiskFileItemFactory factory = new DiskFileItemFactory();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+}

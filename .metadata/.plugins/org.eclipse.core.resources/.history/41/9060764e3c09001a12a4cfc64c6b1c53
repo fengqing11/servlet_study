@@ -1,0 +1,16 @@
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class UploadPhotoServlet extends HttpServlet{
+
+	public void doPost(HttpServletRequest request,HttpServletResponse response) {
+		String filename=null;
+		try {
+			DiskFileItemFactory factory = new 
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+}
